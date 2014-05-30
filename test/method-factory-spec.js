@@ -13,7 +13,7 @@ describe('methodFactory', function() {
     promise = method();
   });
 
-  it('returns a method', function() {
+  it('returns a function', function() {
     method.should.be.a.Function;
   });
 
