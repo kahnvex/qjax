@@ -20,7 +20,7 @@ var options = {
 
 qjax(options).then(printIt);
 ```
-## Development:
+## Development
 
 Install it:
 
