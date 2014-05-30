@@ -13,7 +13,7 @@ exports.http = http;
 exports.methodFactory = function(httpMethod) {
   var qjaxMethod = function(options) {
     options = options || {};
-    options.method = httpMethod;
+    options.type = httpMethod;
     return http(options);
   };
 
