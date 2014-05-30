@@ -3,23 +3,25 @@
 require('./domify-node');
 require('should');
 
-var methodFactory = require('../index.js').methodFactory;
+var qjax = require('../src/index.js');
 
 describe('methodFactory', function() {
   var method;
   var promise;
 
   beforeEach(function() {
-    method = methodFactory('GET');
-    promise = method();
+    method = qjax.methodFactory('GET');
   });
 
   it('returns a function', function() {
     method.should.be.a.Function;
   });
 
-  it('returns a function which returns a promise', function() {
-    promise.should.have.property('then');
-    promise.should.have.property('done');
+  it('makes requests', function(done) {
+    qjax.http({url: 'http://google.com'})
+    .then(function(response) {
+      response[0].statusCode.should.be.exactly(200);
+      done();
+    });
   });
 });
