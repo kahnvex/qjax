@@ -38,7 +38,7 @@ httpGet({url: 'http://google.com'}).then(printIt);
 Install it:
 
 ```
-npm install
+npm install qjax
 ```
 
 Test it:
