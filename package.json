@@ -1,6 +1,6 @@
 {
   "name": "qjax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple Q wrapper for making ajax requests",
   "main": "index.js",
   "scripts": {
