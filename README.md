@@ -1,4 +1,3 @@
-qjax
-====
+# qjax
 
-A Simple Q Wrapper for jQuery.ajax
+A simple Q wrapper for making ajax requests
