@@ -18,8 +18,21 @@ var options = {
   type: 'GET'
 };
 
-qjax(options).then(printIt);
+qjax.http(options).then(printIt);
 ```
+
+There is also an http method factory that can be used like this:
+
+```javascript
+var printIt = function(data) {
+  console.log(data);
+};
+var qjax = require('qjax');
+var httpGet = qjax.methodFactory('GET');
+
+httpGet({url: 'http://google.com'}).then(printIt);
+```
+
 ## Development
 
 Install it:
