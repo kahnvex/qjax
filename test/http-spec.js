@@ -1,6 +1,8 @@
-require('./domify-node');
+'use strict';
 
-var should = require('should');
+require('./domify-node');
+require('should');
+
 var http = require('../index.js').http;
 
 

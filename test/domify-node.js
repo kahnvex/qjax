@@ -1,3 +1,5 @@
+'use strict';
+
 var jsdom = require('jsdom');
 
 GLOBAL.window = jsdom.jsdom().createWindow();
