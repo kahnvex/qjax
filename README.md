@@ -33,6 +33,18 @@ var printIt = function(data) {
 httpGet({url: 'http://google.com'}).then(printIt);
 ```
 
+By default qjax uses `jQuery.ajax`, but you can configure it to use [Request](https://github.com/mikeal/request) - Simplified HTTP Client:
+
+```javascript
+var qjax = require('qjax');
+var request = require('request');
+var qRequest = qjax.requestAdapter(request);
+
+qjax.setHttp(qRequest);
+
+qjax.http(...);
+```
+
 ## Development
 
 Install it:
