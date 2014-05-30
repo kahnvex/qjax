@@ -1,8 +1,9 @@
-require('./domify-node');
+'use strict';
 
-var should = require('should');
+require('./domify-node');
+require('should');
+
 var methodFactory = require('../index.js').methodFactory;
-var q = require('q');
 
 describe('methodFactory', function() {
   var method;
