@@ -2,7 +2,7 @@
   "name": "qjax",
   "version": "0.0.2",
   "description": "A simple Q wrapper for making ajax requests",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -28,6 +28,7 @@
     "should": "4.0.x",
     "mocha": "1.20.x",
     "jsdom": "0.10.x",
-    "jshint": "2.5.x"
+    "jshint": "2.5.x",
+    "request": "2.36.x"
   }
 }

@@ -3,23 +3,29 @@
 require('./domify-node');
 require('should');
 
-var http = require('../index.js').http;
+var qjax = require('../src/index.js');
+var request = require('request');
 
 
 describe('http', function() {
   var promise;
+  var httpOptions;
+  var qRequest = qjax.requestAdapter(request);
 
   beforeEach(function() {
-    var httpOptions = {
+    httpOptions = {
       url: 'http://google.com',
       method: 'GET'
     };
 
-    promise = http(httpOptions);
+    qjax.setHttp(qRequest);
   });
 
-  it('returns a promise', function() {
-    promise.should.have.property('then');
-    promise.should.have.property('done');
+  it('returns a response with the request is complete', function(done) {
+    qjax.http(httpOptions)
+    .then(function(response) {
+      response[0].statusCode.should.be.exactly(200);
+      done();
+    });
   });
 });
